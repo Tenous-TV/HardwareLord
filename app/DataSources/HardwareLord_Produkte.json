@@ -1,0 +1,50 @@
+[
+  {
+    "ApiId": "/providers/microsoft.powerapps/apis/shared_sharepointonline",
+    "CdpRevision": {
+      "BaseUrl": "/",
+      "LastChangedTimeString": "2022-12-15T17:52:37.5500000Z",
+      "RevisionNumber": 1
+    },
+    "ConnectedDataSourceInfoNameMapping": {
+      "{Attachments}": "Anlagen",
+      "{Attachments}@odata.type": "{Attachments} ({Attachments}@odata.type)",
+      "{FilenameWithExtension}": "Dateiname mit Erweiterung",
+      "{FullPath}": "Vollständiger Pfad",
+      "{HasAttachments}": "Hat Anlagen",
+      "{Identifier}": "Bezeichner",
+      "{IsFolder}": "IstOrdner",
+      "{Link}": "Link zu Element",
+      "{ModerationComment}": "Die der Inhaltsgenehmigung dieses Listenelements zugeordnete Kommentare.",
+      "{ModerationStatus}": "Inhaltsgenehmigungsstatus",
+      "{Name}": "Name",
+      "{Path}": "Ordnerpfad",
+      "{Thumbnail}": "Miniaturansicht",
+      "{TriggerWindowEndToken}": "Token für Ende des Zeitfensters auslösen",
+      "{TriggerWindowStartToken}": "Token für Start des Zeitfensters auslösen",
+      "{VersionNumber}": "Versionsnummer",
+      "Author": "Erstellt von",
+      "Author#Claims": "Erstellt von Claims",
+      "Beschreibung": "Beschreibung",
+      "Bewertungen_Negativ": "Bewertungen_Negativ",
+      "Bewertungen_Positiv": "Bewertungen_Positiv",
+      "ComplianceAssetId": "Complianceobjekt-ID",
+      "Created": "Erstellt",
+      "Editor": "Geändert von",
+      "Editor#Claims": "Geändert von Claims",
+      "ID": "ID",
+      "Kategorie": "Kategorie",
+      "Lager": "Lager",
+      "Modified": "Geändert",
+      "Preis": "Preis",
+      "ProduktBild": "ProduktBild",
+      "Title": "Title"
+    },
+    "DatasetName": "https://bbsww-my.sharepoint.com/personal/092bega_bbs-ww_de",
+    "EncodeDataset": true,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "Name": "HardwareLord_Produkte",
+    "Type": "ConnectedDataSourceInfo"
+  }
+]

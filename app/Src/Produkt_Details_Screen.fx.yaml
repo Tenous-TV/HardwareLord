@@ -1,0 +1,75 @@
+Produkt_Details_Screen As screen:
+    Fill: =RGBA(128, 128, 128, 1)
+
+    Label3 As label:
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =66
+        Size: =21
+        Text: =Var_Produkt.Title
+        Width: =336
+        X: =50
+        Y: =540
+        ZIndex: =1
+
+    Rectangle1_14 As rectangle:
+        Fill: =RGBA(0, 0, 0, 1)
+        Height: =137
+        TabIndex: =
+        Width: =639
+        ZIndex: =2
+
+    Label1_8 As label:
+        Color: =RGBA(255, 255, 255, 1)
+        Font: =Font.'Courier New'
+        FontWeight: =FontWeight.Bold
+        Height: =100
+        Italic: =true
+        Size: =45
+        Text: |-
+            ="Durchstöbern
+            "
+        Width: =457
+        X: =50
+        Y: =20
+        ZIndex: =3
+
+    Icon1_7 As icon.ShoppingCart:
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =100
+        Icon: =Icon.ShoppingCart
+        OnSelect: =Navigate(Einkaufswagen_Screen)
+        Width: =100
+        X: =518
+        Y: =20
+        ZIndex: =4
+
+    Image4 As image:
+        Height: =357
+        Image: =Var_Produkt.ProduktBild
+        Width: =412
+        X: =50
+        Y: =183
+        ZIndex: =5
+
+    Label6 As label:
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =235
+        Size: =21
+        Text: =Var_Produkt.Beschreibung
+        Width: =548
+        X: =50
+        Y: =713
+        ZIndex: =6
+
+    Label7 As label:
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =70
+        Size: =21
+        Text: |-
+            ="Bescheibung:"
+        Underline: =true
+        Width: =560
+        X: =50
+        Y: =643
+        ZIndex: =7
+

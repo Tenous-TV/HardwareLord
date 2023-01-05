@@ -1,0 +1,67 @@
+{
+  "63989b7e-fd3b-4cfb-8d4d-2f5bcc46243a": {
+    "connectionParameters": {
+      "sku": "Enterprise"
+    },
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "SharePoint",
+      "iconUri": "https://connectoricons-prod.azureedge.net/u/juanq/gateway/greyhound/3000.150.11/1.0.1613.3116/sharepointonline/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_sharepointonline",
+      "parameterHints": {},
+      "parameterHintsV2": {}
+    },
+    "datasets": {
+      "https://bbsww.sharepoint.com/sites/HBFINF212": {
+        "dataSources": {
+          "HardwareLord_Benutzer": {
+            "tableName": "9d415953-af0b-4ec8-9569-b05a5823a3a2"
+          }
+        }
+      },
+      "https://bbsww-my.sharepoint.com/personal/092bega_bbs-ww_de": {
+        "dataSources": {
+          "HardwareLord_Warenkorb": {
+            "tableName": "1cd0f7db-1b9f-42ea-9075-f037c68c1b56"
+          }
+        }
+      }
+    },
+    "dataSources": [
+      "HardwareLord_Benutzer",
+      "HardwareLord_Warenkorb",
+      "HardwareLord_Produkte"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "63989b7e-fd3b-4cfb-8d4d-2f5bcc46243a"
+  },
+  "db64dd5a-35cf-4ff2-9144-100c6c1f9b04": {
+    "connectionParameters": {
+      "sku": "Enterprise"
+    },
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "SharePoint",
+      "iconUri": "https://connectoricons-prod.azureedge.net/u/juanq/gateway/greyhound/3000.150.11/1.0.1613.3116/sharepointonline/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_sharepointonline",
+      "parameterHints": {},
+      "parameterHintsV2": {}
+    },
+    "datasets": {
+      "https://bbsww-my.sharepoint.com/personal/092bega_bbs-ww_de": {
+        "dataSources": {
+          "HardwareLord_Produkte": {
+            "tableName": "5a37cc3f-096f-49de-a3ef-b0343d9b9b0b"
+          }
+        }
+      }
+    },
+    "dataSources": [
+      "HardwareLord_Produkte"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "db64dd5a-35cf-4ff2-9144-100c6c1f9b04"
+  }
+}

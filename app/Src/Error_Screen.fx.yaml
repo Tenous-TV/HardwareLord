@@ -1,0 +1,21 @@
+Error_Screen As screen:
+
+    Label1 As label:
+        Height: =70
+        Size: =21
+        Text: ="Falscher Anmeldedaten"
+        Width: =560
+        X: =44
+        Y: =104
+        ZIndex: =1
+
+    Button1 As button:
+        Height: =65
+        OnSelect: =Navigate(Login_Screen)
+        Size: =24
+        Text: ="Zum Login"
+        Width: =280
+        X: =140
+        Y: =392
+        ZIndex: =2
+

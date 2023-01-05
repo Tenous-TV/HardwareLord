@@ -1,0 +1,214 @@
+Register_Screen As screen:
+    Fill: =
+
+    lblRegFehlermeldung As label:
+        Height: =70
+        Size: =21
+        Text: ="Passwörter stimmen nicht überein"
+        Visible: =false
+        Width: =560
+        X: =40
+        Y: =952
+        ZIndex: =8
+
+    Registrieren_Form As form:
+        DataSource: =HardwareLord_Benutzer
+        DefaultMode: =FormMode.New
+        Height: =457
+        Width: =640
+        Y: =60
+        ZIndex: =9
+
+        Title_DataCard1 As typedDataCard.textualEditCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="Title"
+            Default: =ThisItem.Title
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@HardwareLord_Benutzer],DataSourceInfo.DisplayName,"Title")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            MaxLength: =DataSourceInfo([@HardwareLord_Benutzer], DataSourceInfo.MaxLength, "Title")
+            Required: =true
+            Update: =DataCardValue1.Text
+            Width: =640
+            X: =0
+            Y: =0
+            ZIndex: =10
+
+            DataCardKey1 As label:
+                AutoHeight: =true
+                Height: =48
+                Size: =21
+                Text: =Parent.DisplayName
+                Visible: =false
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue1 As text:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                Default: =Parent.Default
+                DelayOutput: =true
+                DisplayMode: =Parent.DisplayMode
+                Height: =70
+                MaxLength: =Parent.MaxLength
+                PaddingLeft: =5
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Size: =21
+                Tooltip: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey1.Y + DataCardKey1.Height + 5
+                ZIndex: =2
+
+            ErrorMessage1 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue1.Y + DataCardValue1.Height
+                ZIndex: =3
+
+        B_Passwort_DataCard1 As typedDataCard.textualEditCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="B_Passwort"
+            Default: =ThisItem.B_Passwort
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@HardwareLord_Benutzer],DataSourceInfo.DisplayName,"B_Passwort")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            MaxLength: =DataSourceInfo([@HardwareLord_Benutzer], DataSourceInfo.MaxLength, "B_Passwort")
+            Required: =false
+            Update: =DataCardValue3.Text
+            Width: =640
+            X: =0
+            Y: =1
+            ZIndex: =10
+
+            DataCardKey3 As label:
+                AutoHeight: =true
+                Height: =48
+                Size: =21
+                Text: =Parent.DisplayName
+                Visible: =false
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =144
+                ZIndex: =1
+
+            DataCardValue3 As text:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                Default: =Parent.Default
+                DelayOutput: =true
+                DisplayMode: =Parent.DisplayMode
+                Height: =70
+                MaxLength: =Parent.MaxLength
+                PaddingLeft: =5
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Size: =21
+                Tooltip: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =133
+                ZIndex: =2
+
+            ErrorMessage3 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue3.Y + DataCardValue3.Height
+                ZIndex: =3
+
+            StarVisible3 As label:
+                Align: =Align.Center
+                Height: =DataCardKey3.Height
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey3.Y
+                ZIndex: =4
+
+    Label5 As label:
+        Height: =55
+        Size: =21
+        Text: ="Anmeldename"
+        Width: =560
+        X: =40
+        Y: =60
+        ZIndex: =10
+
+    Label5_1 As label:
+        Height: =55
+        Size: =21
+        Text: ="Passwort"
+        Width: =560
+        X: =40
+        Y: =261
+        ZIndex: =11
+
+    Label5_2 As label:
+        Height: =55
+        Size: =21
+        Text: ="Passwort bestätigen"
+        Width: =560
+        X: =40
+        Y: =462
+        ZIndex: =12
+
+    txtRegPasswortBes As text:
+        Default: =""
+        Height: =73
+        Size: =21
+        Width: =575
+        X: =32
+        Y: =517
+        ZIndex: =13
+
+    btnRegRegistrieren As button:
+        Height: =70
+        OnSelect: |-
+            =If(
+                IsBlank(
+                    LookUp(
+                        HardwareLord_Benutzer, 
+                        Title=DataCardValue1.Text
+                    )
+                ) && DataCardValue3.Text=txtRegPasswortBes.Text, 
+                SubmitForm(Registrieren_Form) && Navigate(Login_Screen),
+                lblRegFehlermeldung.Visible = true
+            )
+        Size: =24
+        Text: ="Registrieren"
+        Width: =280
+        X: =160
+        Y: =652
+        ZIndex: =14
+
