@@ -136,7 +136,7 @@ Favoriten_Screen As screen:
 
     "Gallery3 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
         Height: =859
-        Items: =Filter(HardwareLord_Favoriten, ID = Var_UserID)
+        Items: =Filter(HardwareLord_Favoriten, Title = Var_UserID)
         Layout: =Layout.Vertical
         TemplatePadding: =0
         TemplateSize: =Min(160, Self.Height - 60)
@@ -201,4 +201,12 @@ Favoriten_Screen As screen:
             Width: =Parent.TemplateWidth
             Y: =Parent.TemplateHeight - 1
             ZIndex: =5
+
+    Star3 As star:
+        BorderColor: =RGBA(255, 255, 0, 1)
+        Fill: =RGBA(255, 255, 0, 1)
+        OnSelect: =Remove(Filter(HardwareLord_Favoriten, Title = Var_UserID), )
+        X: =467
+        Y: =175
+        ZIndex: =14
 
