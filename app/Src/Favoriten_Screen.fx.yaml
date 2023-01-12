@@ -145,6 +145,7 @@ Favoriten_Screen As screen:
 
         Image5 As image:
             Height: =128
+            Image: =LookUp(HardwareLord_Produkte, ID = ThisItem.Produkt_ID).ProduktBild
             OnSelect: =Select(Parent)
             Width: =128
             X: =16
