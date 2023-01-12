@@ -263,3 +263,35 @@ Home_Screen As screen:
         Y: =20
         ZIndex: =28
 
+    Image6 As image:
+        Height: =84
+        Image: ='Corsair_CX_Series_Modular_CX750M_01_7f4b-removebg-preview'
+        Width: =84
+        X: =426
+        Y: =830
+        ZIndex: =29
+
+    Image7 As image:
+        Height: =85
+        Image: ='msi-1200-meg-z490-ace-hauptplatine-removebg-preview'
+        Width: =74
+        X: =436
+        Y: =522
+        ZIndex: =30
+
+    Image9 As image:
+        Height: =81
+        Image: ='1419812_1__70429-1-removebg-preview'
+        Width: =75
+        X: =440
+        Y: =730
+        ZIndex: =31
+
+    Image10 As image:
+        Height: =71
+        Image: ='arbeitsspeicher-removebg-preview'
+        Width: =84
+        X: =431
+        Y: =630
+        ZIndex: =32
+
