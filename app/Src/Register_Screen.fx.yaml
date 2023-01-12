@@ -117,6 +117,7 @@ Register_Screen As screen:
                 DisplayMode: =Parent.DisplayMode
                 Height: =70
                 MaxLength: =Parent.MaxLength
+                Mode: =TextMode.Password
                 PaddingLeft: =5
                 RadiusBottomLeft: =0
                 RadiusBottomRight: =0
@@ -203,7 +204,7 @@ Register_Screen As screen:
                         Title=DataCardValue1.Text
                     )
                 ) && DataCardValue3.Text=txtRegPasswortBes.Text, 
-                SubmitForm(Registrieren_Form) && Navigate(Login_Screen),
+                SubmitForm(Registrieren_Form) && ResetForm(Registrieren_Form) && txtRegPasswortBes.Text = "" && Navigate(Login_Screen),
                 lblRegFehlermeldung.Visible = true
             )
         Size: =24

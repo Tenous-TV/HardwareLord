@@ -21,6 +21,9 @@
       },
       "https://bbsww-my.sharepoint.com/personal/092bega_bbs-ww_de": {
         "dataSources": {
+          "HardwareLord_Favoriten": {
+            "tableName": "45874d45-60c0-41b1-9311-4a65039cdc29"
+          },
           "HardwareLord_Warenkorb": {
             "tableName": "1cd0f7db-1b9f-42ea-9075-f037c68c1b56"
           }
@@ -30,7 +33,8 @@
     "dataSources": [
       "HardwareLord_Benutzer",
       "HardwareLord_Warenkorb",
-      "HardwareLord_Produkte"
+      "HardwareLord_Produkte",
+      "HardwareLord_Favoriten"
     ],
     "dependencies": {},
     "dependents": [],

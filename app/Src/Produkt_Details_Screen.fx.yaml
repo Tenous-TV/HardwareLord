@@ -96,3 +96,17 @@ Produkt_Details_Screen As screen:
         Y: =655
         ZIndex: =9
 
+    Star2 As star:
+        BorderColor: =RGBA(255, 255, 0, 1)
+        BorderThickness: =1
+        Fill: =RGBA(255, 255, 255, 1)
+        OnSelect: |-
+            =If(
+                !IsBlank(
+                    LookUp(Filter(HardwareLord_Favoriten, I), )
+                )
+            )
+        X: =518
+        Y: =150
+        ZIndex: =10
+
