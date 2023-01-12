@@ -1,21 +1,38 @@
 Error_Screen As screen:
+    BackgroundImage: ='shop-modified_2'
+    ImagePosition: =ImagePosition.Fill
 
     Label1 As label:
-        Height: =70
+        Height: =42
         Size: =21
-        Text: ="Falscher Anmeldedaten"
-        Width: =560
-        X: =44
-        Y: =104
+        Text: ="Falsche Anmeldedaten"
+        Width: =310
+        X: =169
+        Y: =389
         ZIndex: =1
 
     Button1 As button:
+        Fill: =RGBA(118, 0, 0, 1)
         Height: =65
+        HoverFill: =ColorFade(Self.BorderColor, 20%)
         OnSelect: =Navigate(Login_Screen)
+        PressedFill: =ColorFade(Self.BorderColor, 20%)
         Size: =24
         Text: ="Zum Login"
         Width: =280
-        X: =140
-        Y: =392
+        X: =184
+        Y: =459
         ZIndex: =2
+
+    Label10_2 As label:
+        BorderColor: =RGBA(118, 0, 0, 1)
+        Color: =RGBA(118, 0, 0, 1)
+        FontWeight: =FontWeight.Bold
+        Height: =70
+        Size: =56
+        Text: ="HardwareLord"
+        Width: =560
+        X: =37
+        Y: =107
+        ZIndex: =3
 

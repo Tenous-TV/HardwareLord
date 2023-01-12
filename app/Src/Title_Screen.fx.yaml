@@ -1,22 +1,42 @@
 Title_Screen As screen:
+    BackgroundImage: ='shop-modified'
+    ImagePosition: =ImagePosition.Fill
 
     btnAnmelden As button:
-        Height: =70
+        Fill: =RGBA(118, 0, 0, 1)
+        Height: =130
+        HoverFill: =ColorFade(Self.BorderColor, 20%)
         OnSelect: =Navigate(Login_Screen)
+        PressedFill: =ColorFade(Self.BorderColor, 20%)
         Size: =24
         Text: ="Anmelden"
-        Width: =280
-        X: =152
-        Y: =343
+        Width: =370
+        X: =132
+        Y: =359
         ZIndex: =1
 
     btnRegistrieren As button:
-        Height: =70
+        Fill: =RGBA(118, 0, 0, 1)
+        Height: =130
+        HoverFill: =ColorFade(Self.BorderColor, 20%)
         OnSelect: =Navigate(Register_Screen)
+        PressedFill: =ColorFade(Self.BorderColor, 20%)
         Size: =24
         Text: ="Registrieren"
-        Width: =280
-        X: =152
-        Y: =515
+        Width: =370
+        X: =132
+        Y: =647
         ZIndex: =2
+
+    Label10 As label:
+        BorderColor: =RGBA(118, 0, 0, 1)
+        Color: =RGBA(118, 0, 0, 1)
+        FontWeight: =FontWeight.Bold
+        Height: =70
+        Size: =56
+        Text: ="HardwareLord"
+        Width: =560
+        X: =37
+        Y: =107
+        ZIndex: =3
 
