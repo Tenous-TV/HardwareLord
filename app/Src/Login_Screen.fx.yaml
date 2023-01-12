@@ -59,3 +59,13 @@ Login_Screen As screen:
         Y: =205
         ZIndex: =5
 
+    Button3 As button:
+        Height: =70
+        OnSelect: =Navigate(Register_Screen)
+        Size: =24
+        Text: ="Hier Registrieren"
+        Width: =280
+        X: =180
+        Y: =725
+        ZIndex: =6
+

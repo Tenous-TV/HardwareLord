@@ -186,6 +186,7 @@ Register_Screen As screen:
     txtRegPasswortBes As text:
         Default: =""
         Height: =73
+        Mode: =TextMode.Password
         Size: =21
         Width: =575
         X: =32

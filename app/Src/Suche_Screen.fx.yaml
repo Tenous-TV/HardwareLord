@@ -178,8 +178,8 @@ Suche_Screen As screen:
             Text: =ThisItem.Title
             VerticalAlign: =VerticalAlign.Top
             Width: =Parent.TemplateWidth - Image8.Width - 104
-            X: =Image8.X + Image8.Width + 24
-            Y: =44
+            X: =156
+            Y: =16
             ZIndex: =2
 
         Subtitle6 As label:
@@ -189,7 +189,8 @@ Suche_Screen As screen:
             PaddingLeft: =0
             PaddingRight: =0
             PaddingTop: =0
-            Text: =ThisItem.ID
+            Text: |-
+                ="Preis: " & ThisItem.Preis & "€"
             VerticalAlign: =VerticalAlign.Top
             Width: =Title6.Width
             X: =Title6.X
@@ -208,8 +209,8 @@ Suche_Screen As screen:
             TabIndex: =0
             Tooltip: ="Elementdetails anzeigen"
             Width: =60
-            X: =Parent.TemplateWidth - Self.Width - 5
-            Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
+            X: =576
+            Y: =80
             ZIndex: =4
 
         Separator4 As rectangle:
@@ -218,4 +219,54 @@ Suche_Screen As screen:
             Width: =Parent.TemplateWidth
             Y: =Parent.TemplateHeight - 1
             ZIndex: =5
+
+        Icon8_1 As icon.ShoppingCart:
+            BorderColor: =RGBA(168, 0, 0, 1)
+            Color: =RGBA(168, 0, 0, 1)
+            Icon: =Icon.ShoppingCart
+            OnSelect: |+
+                =Patch(HardwareLord_Warenkorb, Defaults(HardwareLord_Warenkorb), {Title: Var_UserID, Artikel_ID: ThisItem.ID, Anzahl: 1})
+                /*Set(valueToChange; LookUp(Filter(HardwareLord_Warenkorb; Title = Var_UserID); Artikel_ID = ThisItem.ID))
+                &
+                Patch(
+                    Filter(HardwareLord_Warenkorb; Title = Var_UserID); 
+                    ;
+                    {IncrementFieldName: 
+                    //Concat(Filter(HardwareLord_Warenkorb; Title = Var_UserID); "Anzahl"; ",");
+                )
+                */
+                
+            X: =572
+            Y: =4
+            ZIndex: =6
+
+        Subtitle6_1 As label:
+            Height: =Self.Size * 1.8
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: |-
+                ="Kategorie: " & ThisItem.Kategorie
+            VerticalAlign: =VerticalAlign.Top
+            Width: =Title6.Width
+            X: =Title6.X
+            Y: =88
+            ZIndex: =7
+
+        Subtitle6_2 As label:
+            Height: =Self.Size * 1.8
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: |-
+                ="Auf Lager: " & ThisItem.Lager
+            VerticalAlign: =VerticalAlign.Top
+            Width: =Title6.Width
+            X: =Title6.X
+            Y: =120
+            ZIndex: =8
 
