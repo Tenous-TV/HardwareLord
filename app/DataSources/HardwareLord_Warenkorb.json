@@ -1,0 +1,45 @@
+[
+  {
+    "ApiId": "/providers/microsoft.powerapps/apis/shared_sharepointonline",
+    "CdpRevision": {
+      "BaseUrl": "/",
+      "LastChangedTimeString": "2022-11-09T17:32:14.6500000Z",
+      "RevisionNumber": 1
+    },
+    "ConnectedDataSourceInfoNameMapping": {
+      "{Attachments}": "Anlagen",
+      "{Attachments}@odata.type": "{Attachments} ({Attachments}@odata.type)",
+      "{FilenameWithExtension}": "Dateiname mit Erweiterung",
+      "{FullPath}": "Vollständiger Pfad",
+      "{HasAttachments}": "Hat Anlagen",
+      "{Identifier}": "Bezeichner",
+      "{IsFolder}": "IstOrdner",
+      "{Link}": "Link zu Element",
+      "{ModerationComment}": "Die der Inhaltsgenehmigung dieses Listenelements zugeordnete Kommentare.",
+      "{ModerationStatus}": "Inhaltsgenehmigungsstatus",
+      "{Name}": "Name",
+      "{Path}": "Ordnerpfad",
+      "{Thumbnail}": "Miniaturansicht",
+      "{TriggerWindowEndToken}": "Token für Ende des Zeitfensters auslösen",
+      "{TriggerWindowStartToken}": "Token für Start des Zeitfensters auslösen",
+      "{VersionNumber}": "Versionsnummer",
+      "ArtikelID": "Artikel_ID",
+      "Author": "Erstellt von",
+      "Author#Claims": "Erstellt von Claims",
+      "ComplianceAssetId": "Complianceobjekt-ID",
+      "Created": "Erstellt",
+      "Editor": "Geändert von",
+      "Editor#Claims": "Geändert von Claims",
+      "ID": "ID",
+      "Modified": "Geändert",
+      "Title": "Title",
+      "UserID": "Anzahl"
+    },
+    "DatasetName": "https://bbsww-my.sharepoint.com/personal/092bega_bbs-ww_de",
+    "EncodeDataset": true,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "Name": "HardwareLord_Warenkorb",
+    "Type": "ConnectedDataSourceInfo"
+  }
+]

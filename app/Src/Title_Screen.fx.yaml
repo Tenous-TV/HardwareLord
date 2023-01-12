@@ -1,0 +1,22 @@
+Title_Screen As screen:
+
+    btnAnmelden As button:
+        Height: =70
+        OnSelect: =Navigate(Login_Screen)
+        Size: =24
+        Text: ="Anmelden"
+        Width: =280
+        X: =152
+        Y: =343
+        ZIndex: =1
+
+    btnRegistrieren As button:
+        Height: =70
+        OnSelect: =Navigate(Register_Screen)
+        Size: =24
+        Text: ="Registrieren"
+        Width: =280
+        X: =152
+        Y: =515
+        ZIndex: =2
+

@@ -1,0 +1,71 @@
+Login_Screen As screen:
+    OnVisible: =
+
+    txtBenutzername As text:
+        Default: =""
+        Height: =70
+        OnSelect: =
+        Size: =21
+        Width: =560
+        X: =40
+        Y: =275
+        ZIndex: =1
+
+    txtPasswort As text:
+        Default: =""
+        Height: =70
+        Mode: =TextMode.Password
+        Size: =21
+        Width: =560
+        X: =40
+        Y: =486
+        ZIndex: =2
+
+    btnLogin As button:
+        Height: =70
+        OnSelect: |-
+            =If(
+                !IsBlank(
+                    LookUp(
+                        HardwareLord_Benutzer, 
+                        Title=txtBenutzername.Text && B_Passwort=txtPasswort.Text
+                    )
+                ), 
+                Navigate(Home_Screen) && Set(Var_UserID, LookUp(HardwareLord_Benutzer, txtBenutzername.Text = Title).ID), 
+                Navigate(Error_Screen)
+            )
+        Size: =24
+        Text: ="Login"
+        Width: =280
+        X: =180
+        Y: =614
+        ZIndex: =3
+
+    lblPasswort As label:
+        Height: =70
+        Size: =21
+        Text: ="Passwort"
+        Width: =560
+        X: =40
+        Y: =416
+        ZIndex: =4
+
+    lblBenutzername As label:
+        Height: =70
+        Size: =21
+        Text: ="Benutzername"
+        Width: =560
+        X: =40
+        Y: =205
+        ZIndex: =5
+
+    Button3 As button:
+        Height: =70
+        OnSelect: =Navigate(Register_Screen)
+        Size: =24
+        Text: ="Hier Registrieren"
+        Width: =280
+        X: =180
+        Y: =725
+        ZIndex: =6
+
