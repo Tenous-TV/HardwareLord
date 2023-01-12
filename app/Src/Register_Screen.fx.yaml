@@ -208,7 +208,7 @@ Register_Screen As screen:
                         Title=DataCardValue1.Text
                     )
                 ) && DataCardValue3.Text=txtRegPasswortBes.Text, 
-                SubmitForm(Registrieren_Form) && Navigate(Login_Screen),
+                SubmitForm(Registrieren_Form) && ResetForm(Registrieren_Form) && txtRegPasswortBes.Text = "" && Navigate(Login_Screen),
                 lblRegFehlermeldung.Visible = true
             )
         PressedFill: =ColorFade(Self.BorderColor, 20%)
