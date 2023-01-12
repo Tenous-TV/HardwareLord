@@ -135,7 +135,7 @@ Suche_Screen As screen:
         ZIndex: =12
 
     txt_Suche As text:
-        Default: ="Texteingabe"
+        Default: =
         Height: =70
         Size: =21
         Width: =525
@@ -200,7 +200,7 @@ Suche_Screen As screen:
             AccessibleLabel: =Self.Tooltip
             Height: =60
             Icon: =Icon.ChevronRight
-            OnSelect: =Select(Parent)
+            OnSelect: =Navigate(Produkt_Details_Screen) && Set(Var_Produkt, LookUp(HardwareLord_Produkte, ID = ThisItem.ID))
             PaddingBottom: =10
             PaddingLeft: =10
             PaddingRight: =10

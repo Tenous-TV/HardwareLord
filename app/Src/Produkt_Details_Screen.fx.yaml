@@ -8,7 +8,7 @@ Produkt_Details_Screen As screen:
         Text: =Var_Produkt.Title
         Width: =336
         X: =50
-        Y: =540
+        Y: =566
         ZIndex: =1
 
     Rectangle1_14 As rectangle:
@@ -48,7 +48,7 @@ Produkt_Details_Screen As screen:
         Image: =Var_Produkt.ProduktBild
         Width: =412
         X: =50
-        Y: =183
+        Y: =224
         ZIndex: =5
 
     Label6 As label:
@@ -58,7 +58,7 @@ Produkt_Details_Screen As screen:
         Text: =Var_Produkt.Beschreibung
         Width: =548
         X: =50
-        Y: =713
+        Y: =783
         ZIndex: =6
 
     Label7 As label:
@@ -70,6 +70,29 @@ Produkt_Details_Screen As screen:
         Underline: =true
         Width: =560
         X: =50
-        Y: =643
+        Y: =739
         ZIndex: =7
+
+    Button2 As button:
+        Color: =RGBA(0, 0, 0, 1)
+        Fill: =RGBA(153, 153, 153, 1)
+        Height: =56
+        OnSelect: =Navigate(Suche_Screen)
+        Size: =24
+        Text: ="Zurück"
+        Width: =190
+        Y: =137
+        ZIndex: =8
+
+    Label9 As label:
+        Color: =RGBA(255, 255, 255, 1)
+        Fill: =RGBA(128, 128, 128, 1)
+        FontWeight: =FontWeight.Bold
+        Height: =60
+        Size: =23
+        Text: =Var_Produkt.Preis & "€"
+        Width: =360
+        X: =50
+        Y: =655
+        ZIndex: =9
 
