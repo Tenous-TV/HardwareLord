@@ -7,8 +7,8 @@ Error_Screen As screen:
         Size: =21
         Text: ="Falsche Anmeldedaten"
         Width: =310
-        X: =169
-        Y: =389
+        X: =162
+        Y: =350
         ZIndex: =1
 
     Button1 As button:
@@ -20,8 +20,8 @@ Error_Screen As screen:
         Size: =24
         Text: ="Zum Login"
         Width: =280
-        X: =184
-        Y: =459
+        X: =177
+        Y: =407
         ZIndex: =2
 
     Label10_2 As label:
