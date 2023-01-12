@@ -102,9 +102,10 @@ Produkt_Details_Screen As screen:
         Fill: =RGBA(255, 255, 255, 1)
         OnSelect: |-
             =If(
-                !IsBlank(
-                    LookUp(Filter(HardwareLord_Favoriten, I), )
-                )
+                IsBlank(
+                    LookUp(Filter(HardwareLord_Favoriten, Title = Var_UserID), Produkt_ID = ThisRecord.Produkt_ID)
+                ),
+                
             )
         X: =518
         Y: =150

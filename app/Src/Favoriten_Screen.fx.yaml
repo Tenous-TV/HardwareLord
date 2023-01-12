@@ -205,7 +205,7 @@ Favoriten_Screen As screen:
     Star3 As star:
         BorderColor: =RGBA(255, 255, 0, 1)
         Fill: =RGBA(255, 255, 0, 1)
-        OnSelect: =Remove(Filter(HardwareLord_Favoriten, Title = Var_UserID), )
+        OnSelect: =Remove(HardwareLord_Favoriten, LookUp(Filter(HardwareLord_Favoriten, Title = Var_UserID), Produkt_ID = ThisRecord.Produkt_ID))
         X: =467
         Y: =175
         ZIndex: =14
