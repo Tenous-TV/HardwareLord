@@ -102,15 +102,18 @@ Produkt_Details_Screen As screen:
         Fill: |-
             =If(
                 IsBlank(
-                    LookUp(
-                ),    
+                    LookUp(Filter(HardwareLord_Favoriten, Title = Var_UserID), Produkt_ID = Var_Produkt.ID)
+                ),
+                RGBA(255,255,255,1),
+                RGBA(255,215,0,1)
             )
         OnSelect: |-
             =If(
                 IsBlank(
                     LookUp(Filter(HardwareLord_Favoriten, Title = Var_UserID), Produkt_ID = Var_Produkt.ID)
                 ),
-                Collect(HardwareLord_Favoriten, {Title:Text(Var_UserID), Produkt_ID:Var_Produkt.ID})
+                Collect(HardwareLord_Favoriten, {Title:Text(Var_UserID), Produkt_ID:Var_Produkt.ID}),
+                Remove(HardwareLord_Favoriten, LookUp(Filter(HardwareLord_Favoriten, Title = Var_UserID), Produkt_ID = Var_Produkt.ID))
             )
         X: =518
         Y: =150

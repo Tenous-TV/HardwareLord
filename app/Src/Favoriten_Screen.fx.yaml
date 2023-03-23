@@ -153,32 +153,19 @@ Favoriten_Screen As screen:
             ZIndex: =1
 
         Title3 As label:
-            Height: =Self.Size * 1.8
+            Align: =Align.Center
+            Height: =114
             OnSelect: =Select(Parent)
             PaddingBottom: =0
             PaddingLeft: =0
             PaddingRight: =0
             PaddingTop: =0
+            Size: =22
             Text: =LookUp(HardwareLord_Produkte, ID = ThisItem.Produkt_ID).Title
-            VerticalAlign: =VerticalAlign.Top
-            Width: =Parent.TemplateWidth - Image5.Width - 104
-            X: =Image5.X + Image5.Width + 24
-            Y: =44
+            Width: =290
+            X: =155
+            Y: =30
             ZIndex: =2
-
-        Subtitle3 As label:
-            Height: =Self.Size * 1.8
-            OnSelect: =Select(Parent)
-            PaddingBottom: =0
-            PaddingLeft: =0
-            PaddingRight: =0
-            PaddingTop: =0
-            Text: =LookUp(HardwareLord_Produkte, ID = ThisItem.Produkt_ID).Preis & "€"
-            VerticalAlign: =VerticalAlign.Top
-            Width: =Title3.Width
-            X: =Title3.X
-            Y: =Title3.Y + Title3.Height + 4
-            ZIndex: =3
 
         NextArrow3 As icon.ChevronRight:
             AccessibleLabel: =Self.Tooltip
