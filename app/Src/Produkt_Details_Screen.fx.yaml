@@ -103,7 +103,7 @@ Produkt_Details_Screen As screen:
         OnSelect: |-
             =If(
                 IsBlank(
-                    LookUp(Filter(HardwareLord_Favoriten, Title = Var_UserID), Produkt_ID = ThisRecord.Produkt_ID)
+                    LookUp(Filter(HardwareLord_Favoriten, Title = Var_UserID), Produkt_ID = Var_Produkt.ID)
                 ),
                 Collect(HardwareLord_Favoriten, {Title:Text(Var_UserID), Produkt_ID:Var_Produkt.ID})
             )
