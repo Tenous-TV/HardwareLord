@@ -230,16 +230,17 @@ Suche_Screen As screen:
             Color: =RGBA(118, 0, 0, 1)
             Icon: =Icon.ShoppingCart
             OnSelect: |+
-                =Patch(HardwareLord_Warenkorb, Defaults(HardwareLord_Warenkorb), {Title: Var_UserID, Artikel_ID: ThisItem.ID, Anzahl: 1})
-                /*Set(valueToChange; LookUp(Filter(HardwareLord_Warenkorb; Title = Var_UserID); Artikel_ID = ThisItem.ID))
+                =//Patch(HardwareLord_Warenkorb; Defaults(HardwareLord_Warenkorb); {Title: Var_UserID; Artikel_ID: ThisItem.ID; Anzahl: 1})
+                
+                Set(valueToChange, LookUp(Filter(HardwareLord_Warenkorb, Title = Var_UserID), Artikel_ID = ThisItem.ID)) 
                 &
                 Patch(
-                    Filter(HardwareLord_Warenkorb; Title = Var_UserID); 
-                    ;
-                    {IncrementFieldName: 
+                    Filter(HardwareLord_Warenkorb, Title = Var_UserID),
+                    valueToChange,
+                    {Anzahl: valueToChange.Anzahl + 1}
                     //Concat(Filter(HardwareLord_Warenkorb; Title = Var_UserID); "Anzahl"; ",");
                 )
-                */
+                
                 
             X: =572
             Y: =4
