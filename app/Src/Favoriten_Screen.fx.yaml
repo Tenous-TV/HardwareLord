@@ -203,11 +203,11 @@ Favoriten_Screen As screen:
             Y: =Parent.TemplateHeight - 1
             ZIndex: =5
 
-    Star3 As star:
-        BorderColor: =RGBA(255, 255, 0, 1)
-        Fill: =RGBA(255, 255, 0, 1)
-        OnSelect: =Remove(HardwareLord_Favoriten, LookUp(Filter(HardwareLord_Favoriten, Title = Var_UserID), Produkt_ID = ThisRecord.Produkt_ID))
-        X: =467
-        Y: =175
-        ZIndex: =14
+        Star3 As star:
+            BorderColor: =RGBA(255, 255, 0, 1)
+            Fill: =RGBA(255, 255, 0, 1)
+            OnSelect: =Remove(HardwareLord_Favoriten, LookUp(Filter(HardwareLord_Favoriten, Title = Var_UserID), Produkt_ID = Var_Produkt.ID))
+            X: =476
+            Y: =30
+            ZIndex: =6
 
