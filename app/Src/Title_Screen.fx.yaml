@@ -1,6 +1,5 @@
 Title_Screen As screen:
-    BackgroundImage: ='shop-modified'
-    ImagePosition: =ImagePosition.Fill
+    BackgroundImage: =
 
     btnAnmelden As button:
         Fill: =RGBA(118, 0, 0, 1)

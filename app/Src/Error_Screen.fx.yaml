@@ -1,5 +1,5 @@
 Error_Screen As screen:
-    BackgroundImage: ='shop-modified_2'
+    BackgroundImage: =
     ImagePosition: =ImagePosition.Fill
 
     Label1 As label:

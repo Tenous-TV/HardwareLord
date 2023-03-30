@@ -61,7 +61,7 @@ Suche_Screen As screen:
             "
         Width: =100
         X: =30
-        Y: =1110
+        Y: =1100
         ZIndex: =6
 
     Label2_6 As label:
@@ -74,7 +74,7 @@ Suche_Screen As screen:
             "
         Width: =100
         X: =190
-        Y: =1110
+        Y: =1100
         ZIndex: =7
 
     Label2_7 As label:
@@ -87,7 +87,7 @@ Suche_Screen As screen:
             "
         Width: =132
         X: =335
-        Y: =1105
+        Y: =1095
         ZIndex: =8
 
     Label2_8 As label:
@@ -100,7 +100,7 @@ Suche_Screen As screen:
             "
         Width: =100
         X: =510
-        Y: =1110
+        Y: =1100
         ZIndex: =9
 
     Rectangle1_3 As rectangle:
@@ -219,6 +219,8 @@ Suche_Screen As screen:
             ZIndex: =4
 
         Separator4 As rectangle:
+            BorderColor: =RGBA(184, 0, 0, 1)
+            Fill: =RGBA(184, 0, 0, 1)
             Height: =1
             OnSelect: =Select(Parent)
             Width: =Parent.TemplateWidth

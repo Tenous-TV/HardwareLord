@@ -1,5 +1,5 @@
 Register_Screen As screen:
-    BackgroundImage: ='shop-modified_3'
+    BackgroundImage: =
     Fill: =
     ImagePosition: =ImagePosition.Fill
 
@@ -22,6 +22,7 @@ Register_Screen As screen:
         ZIndex: =9
 
         Title_DataCard1 As typedDataCard.textualEditCard:
+            BorderColor: =RGBA(184, 0, 0, 1)
             BorderStyle: =BorderStyle.Solid
             DataField: ="Title"
             Default: =ThisItem.Title
@@ -85,6 +86,7 @@ Register_Screen As screen:
                 ZIndex: =3
 
         B_Passwort_DataCard1 As typedDataCard.textualEditCard:
+            BorderColor: =RGBA(184, 0, 0, 1)
             BorderStyle: =BorderStyle.Solid
             DataField: ="B_Passwort"
             Default: =ThisItem.B_Passwort
@@ -187,6 +189,7 @@ Register_Screen As screen:
         ZIndex: =12
 
     txtRegPasswortBes As text:
+        BorderColor: =RGBA(184, 0, 0, 1)
         Default: =""
         Height: =73
         Mode: =TextMode.Password
@@ -215,7 +218,7 @@ Register_Screen As screen:
         Size: =24
         Text: ="Registrieren"
         Width: =280
-        X: =160
+        X: =177
         Y: =822
         ZIndex: =14
 

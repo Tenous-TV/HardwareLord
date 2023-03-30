@@ -1,9 +1,10 @@
 Login_Screen As screen:
-    BackgroundImage: ='shop-modified_1'
+    BackgroundImage: =
     ImagePosition: =ImagePosition.Fill
     OnVisible: =
 
     txtBenutzername As text:
+        BorderColor: =RGBA(184, 0, 0, 1)
         Default: =""
         Height: =70
         OnSelect: =
@@ -14,6 +15,7 @@ Login_Screen As screen:
         ZIndex: =1
 
     txtPasswort As text:
+        BorderColor: =RGBA(184, 0, 0, 1)
         Default: =""
         Height: =70
         Mode: =TextMode.Password
